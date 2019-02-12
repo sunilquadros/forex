@@ -1,0 +1,16 @@
+eureka:
+  instance:
+    nonSecurePort: 80
+    hostname: ${vcap.application.uris[0]}
+  client:
+    service-url:
+      default-zone: ${vcap.services.eureka.credentials.url}
+spring:
+  profiles: cloud
+  application:
+    name: forex-service
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true

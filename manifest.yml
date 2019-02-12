@@ -1,0 +1,10 @@
+---
+applications:
+- name: forex1
+  memory: 1024M
+  instances: 1
+  host: forex1-service
+  path: target/spring-boot-microservice-forex-service-1-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+
